@@ -1,0 +1,36 @@
+<div class="text-center container" id="bloc_features">
+  <h1 *showItBootstrap="['xs','sm']" class="display-4">{{title}}</h1>
+  <h1 *showItBootstrap="['md','lg', 'xl']" class="display-3">{{title}}</h1>
+  <div *showItBootstrap="['md','lg','sm', 'xl']" class="btn-group " role="group">
+    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 10px; width: auto" fxLayoutAlign="center" fxLayout.xs="0%">
+      {{part.title}}
+    </button>
+  </div>
+  <div *showItBootstrap="['xs']" class="btn-group-vertical " role="group">
+    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" class="btn btn-dark" style="width: 225px" fxLayoutAlign="center">
+      {{part.title}}
+    </button>
+  </div>
+  <div *ngFor="let part of data">
+    <div *ngIf="activeElement === part.title">
+      <div class="row">
+        <div class="col-12">
+          <img *ngIf="activateVideo() === true" [src]="part.image" style="width: 100%; object-fit: contain" class="img_features">
+          <div *showItBootstrap="['md','lg','sm', 'xl']">
+            <youtube-player *ngIf="activateVideo() === false" [videoId]="id" (ready)="savePlayer($event)" (change)="onStateChange($event)" [width]="width" [height]="height" style="object-fit: contain">
+            </youtube-player>
+          </div>
+          <div *showItBootstrap="['xs']">
+            <youtube-player *ngIf="activateVideo() === false" [videoId]="id" (ready)="savePlayer($event)" (change)="onStateChange($event)" [width]="widthsm" [height]="height" style="object-fit: contain">
+          </youtube-player>
+          </div>
+        </div>
+      </div>
+      <div class="content ">
+        <h2 style="margin-top: 20px">{{part.title}}</h2>
+        <p class="text-justify" style="margin-top: 10px">{{part.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
