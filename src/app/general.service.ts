@@ -15,11 +15,4 @@ export class GeneralService {
   getGeneral() {
     return this.http.get('assets/data.json');
   }
-
-  // getGeneralResponse(): Observable<HttpResponse<General>> {
-  //   return this.http.get<General>(
-  //     this.configUrl, {observe: 'response'}
-  //   );
-  // }
-
 }

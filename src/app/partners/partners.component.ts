@@ -7,15 +7,14 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./partners.component.css']
 })
 export class PartnersComponent implements OnInit {
-
   @Input() data: any;
+
+  title = 'Partners - CHUV';
 
   closeResult: string;
 
   constructor(private modalService: NgbModal) {
   }
-
-  title = 'Partners -CHUV';
 
   ngOnInit() {
   }
@@ -37,5 +36,4 @@ export class PartnersComponent implements OnInit {
       return  `with: ${reason}`;
     }
   }
-
 }

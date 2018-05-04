@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
@@ -15,6 +14,7 @@ export class FeaturesComponent implements OnInit {
   width = '560px';
   widthsm = '270px';
   height = '315px';
+  activeCarousel = 'Augmented reality and tracking';
 
   constructor() { }
 
@@ -24,7 +24,14 @@ export class FeaturesComponent implements OnInit {
     this.activeElement = title;
   }
   activateVideo() {
-    if(this.activeElement == this.videoTitle) {
+    if (this.activeElement == this.videoTitle) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  activateCarousel() {
+    if (this.activeElement == this.activeCarousel) {
       return false;
     } else {
       return true;
@@ -33,7 +40,7 @@ export class FeaturesComponent implements OnInit {
   savePlayer (player) {
     this.player = player;
     console.log('player instance', player)
-    }
+  }
     onStateChange(event){
     console.log('player state', event.data);
   }

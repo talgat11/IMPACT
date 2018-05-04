@@ -11,33 +11,10 @@ import {ContactComponent} from '../contact/contact.component';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-    routerConfig: Routes = [
-    {
-      path: 'general',
-      component: GeneralComponent
-    },
-    {
-      path: 'features',
-      component: FeaturesComponent
-    },
-    {
-      path: 'team',
-      component: TeamComponent
-    },
-    {
-      path: 'contact',
-      component: ContactComponent
-    }
-  ];
-
-
 
   constructor() {
   }
 
   ngOnInit() {
   }
-
-
-
 }

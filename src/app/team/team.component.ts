@@ -10,11 +10,13 @@ export class TeamComponent implements OnInit {
 
   @Input() data: any;
 
+  title = 'Team';
+
   closeResult: string;
 
   constructor(private modalService: NgbModal) {
  }
-  title = 'Team';
+
     ngOnInit() {
   }
 

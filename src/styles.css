@@ -1,5 +1,13 @@
 .bg-1 {
-  background-color: rgba(0, 0, 0, .65);
+
+
+}
+.bg-2 {
+  background-color: #374c4c;
+  color: white;
+}
+.bg-3 {
+  background-color: #212d2d;
   color: white;
 }
 .container-team {
@@ -27,4 +35,14 @@ agm-map {
   width: 700px;
   height: 400px;
 }
+.carousel-control-next-icon {
+  background-image : url("assets/next.png") !important;
+  width: 55px !important;
+  height: 55px !important;
+}
+.carousel-control-prev-icon {
+  background-image : url("assets/previous.png") !important;
+  width: 50px !important;
+  height: 50px !important;
 
+}

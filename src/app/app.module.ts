@@ -16,6 +16,8 @@ import { PartnersComponent } from './partners/partners.component';
 import {YoutubePlayerModule} from 'ng2-youtube-player';
 import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
 import { ResponsiveModule} from 'ng2-responsive';
+import { ResultsComponent } from './results/results.component';
+import {CarouselModule} from 'angular2-carousel';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { ResponsiveModule} from 'ng2-responsive';
     ContactComponent,
     NavbarComponent,
     PartnersComponent,
-    AcknowledgementComponent
+    AcknowledgementComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { ResponsiveModule} from 'ng2-responsive';
     AgmCoreModule.forRoot({apiKey: 'AIzaSyBjtzdOyCDiQ4EAuX9hmslTlQsXAsZ6800'}),
     FlexLayoutModule,
     YoutubePlayerModule,
-    ResponsiveModule
+    ResponsiveModule,
+    CarouselModule
   ],
   providers: [
     GeneralService
